@@ -7,10 +7,14 @@ import About from "./components/about/about.jsx";
 import Testimonies from "./components/testimonies/testimonies.jsx";
 import Subscribe from "./components/subscribe/subscribe.jsx";
 import Footer from "./components/footer/footer.jsx";
+import Blog from "./components/blog/blog.jsx";
 
 function App(props) {
   return (
     <div>
+      {/* <Header />
+      <Blog />
+      <Footer /> */}
       <Header />
       <Hero />
       <About />

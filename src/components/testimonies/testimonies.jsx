@@ -2,6 +2,8 @@
 
 import React, { useState, useRef } from "react";
 import testimoniesjson from "./testimoniesjson";
+import ArrowLeft from "@mui/icons-material/ArrowLeft";
+import ArrowRight from "@mui/icons-material/ArrowRight";
 
 function Testimonies(props) {
   // const [testimonies, setTestimonies] = useState(testimoniesjson);
@@ -29,7 +31,9 @@ function Testimonies(props) {
     <div className="flex-display-column testimony-container">
       <h5>Testimonies</h5>
       <div className="btn-and-testimony">
-        <button onClick={handlePreviousTestifier}>-</button>
+        <button onClick={handlePreviousTestifier}>
+          <ArrowLeft />
+        </button>
         <div className="flex-display-column testimony">
           <div className="image-div">
             <img src={testimoniesjson[counts].image} alt="human1" />
@@ -37,7 +41,9 @@ function Testimonies(props) {
           <h4>{testimoniesjson[counts].name}</h4>
           <p>{testimoniesjson[counts].testimony}</p>
         </div>
-        <button onClick={handleNextTestifier}>-</button>
+        <button onClick={handleNextTestifier}>
+          <ArrowRight />
+        </button>
       </div>
     </div>
   );

@@ -7,8 +7,62 @@
   font-family: futura md bt;
 }
 .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 1em;
   text-align: center;
+}
+.headertext {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+}
+.navlinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  padding: 1em;
+  width: 100%;
+  height: auto;
+  animation: open 0.5s;
+  position: absolute;
+  opacity: 90%;
+}
+.hide {
+  animation: close 1s;
+  position: absolute;
+}
+.hide > p {
+  display: none;
+}
+@keyframes open {
+  from {
+    height: 0em;
+  }
+  to {
+    height: 17em;
+  }
+}
+@keyframes close {
+  from {
+    height: 17em;
+  }
+  to {
+    height: 0em;
+  }
+}
+.navlinks > p {
+  margin: 1em;
+  color: #fff;
+  font-size: 1.2em;
+}
+.flex-display-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .flex-display-column {
   display: flex;
@@ -160,4 +214,57 @@
   font-size: 1.2em;
   border: none;
   color: #fff;
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.faqs-container {
+  align-items: center;
+  padding: 1em;
+  margin: 1em;
+  background: #fff;
+  box-shadow: 2px 2px 6px -10px #000;
+}
+.faqs-container > h4 {
+  margin: 0 0 1em 0;
+  font-size: 1.5em;
+}
+.faqs-container > input {
+  padding: 1em;
+  background: none;
+  width: 100%;
+  border: 2px solid orange;
+}
+.faqs {
+  text-align: left;
+  margin: 1em 0;
+}
+.faqs > p {
+  margin: 0.5em 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+.send-questions {
+  background: orange;
+  padding: 1em;
+  text-align: center;
+}
+.send-questions > h4 {
+  color: #fff;
+}
+.send-questions > input {
+  padding: 1em;
+  border: none;
+  margin: 1em 0;
+}
+.send-questions > button {
+  background: #000;
+  padding: 1em;
+  border: none;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
 }
